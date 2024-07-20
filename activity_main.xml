@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#027C07"
+
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/sky">
+
+            <Button
+                android:id="@+id/cloud"
+                android:layout_width="129dp"
+                android:layout_height="109dp"
+                android:layout_gravity="right"
+                android:backgroundTint="#A1DDE4"
+                android:clickable="false"
+                android:contextClickable="false"
+                android:fadingEdge="horizontal|vertical"
+                android:linksClickable="false"
+                android:longClickable="false"
+                android:shadowColor="#F3EFEF"
+                android:textColor="#F1EBEB"
+                android:textColorHighlight="#ECE8E8"
+                android:textColorHint="#ECE8E8"
+                android:textColorLink="#F1EDED"
+                app:rippleColor="#F4F0F0"
+                app:toggleCheckedStateOnClick="false" />
+
+            <TextView
+                android:id="@+id/speedtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="3"
+                android:height="70dp"
+                android:fontFamily="sans-serif-black"
+                android:foregroundTint="#191818"
+                android:text="_"
+                android:textAllCaps="true"
+                android:textColor="#121111"
+                android:textColorLink="#0B0B0B"
+                android:textSize="60sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:max="100"
+                android:maxWidth="60dp"
+                android:maxHeight="60dp"
+                android:minWidth="60dp"
+                android:minHeight="60dp"
+                android:progressBackgroundTint="#770404"
+                android:progressTint="#F10606"
+                android:scaleY="8" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="#FFEB3B" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="#4CAF50" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="#E91E63" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:max="100"
+                android:maxWidth="60dp"
+                android:maxHeight="60dp"
+                android:minWidth="60dp"
+                android:minHeight="60dp"
+                android:progressBackgroundTint="#FBF6F6"
+                android:progressTint="#101010"
+                android:scaleY="8" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="#538A06">
+
+            <TextView
+                android:id="@+id/sign"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+
+                android:background="#0C0C0C"
+                android:keepScreenOn="true"
+                android:text="@string/dummy_content"
+                android:textColor="#090909"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/road">
+
+            <Button
+                android:id="@+id/buttonl"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|left"
+                android:layout_weight="1"
+                android:backgroundTint="#ED0A0A"
+                android:onClick="onClickl"
+                android:text="N"
+                android:textSize="50dp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|right"
+                android:layout_weight="1"
+                android:backgroundTint="#191919"
+                android:onClick="onClickr"
+                android:text="1"
+                android:textSize="50dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/car2"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="60dp"
+                app:srcCompat="@drawable/lamb2" />
+
+            <ImageView
+                android:id="@+id/car"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                app:srcCompat="@drawable/lamb" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AF043E"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/menumoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:text="_"
+                    android:textColor="#0B0A0A"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="preparetorace"
+                    android:text="RACE"
+                    android:textSize="40dp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="garageop"
+                    android:text="GARAGE"
+                    android:textSize="40dp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="infoop"
+                    android:text="INFO"
+                    android:textSize="40dp" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="tour"
+                    android:text="TOURNAMENT"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="20dp"
+                    android:text="DRAG \n BURN"
+                    android:textColor="#0B0A0A"
+                    android:textSize="80dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/garagescr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A1A0A0"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/garagemoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="20dp"
+            android:text="$$$"
+            android:textColor="#101010"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/buttongm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:onClick="menuopen"
+            android:text="MENU"
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/enginebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="engineupgrade"
+                android:text="temp"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/tiresbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tiresupgrade"
+                android:text="Button"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/coolantbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="coolupgrade"
+                android:text="Button"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/driverbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="driverupgrade"
+                android:text="Button"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="max lvl 9"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/infoscr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8BC34A"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textinf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textinfstr"
+            android:textColor="#0B0A0A"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:onClick="menuopen"
+            android:text="MENU"
+            android:textColor="#0C0C0C"
+            android:textSize="30dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/endscr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0C39DA"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/endstr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="_"
+                android:textColor="#0B0A0A"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/timestr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="_"
+                android:textColor="#0B0A0A"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/winmoneystr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="_"
+                android:textColor="#0B0A0A"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:onClick="preparetorace"
+            android:text="AGAIN"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/endtomenubtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:onClick="menuopen"
+            android:text="MENU"
+            android:textSize="30dp" />
+
+    </FrameLayout>
+
+</FrameLayout>

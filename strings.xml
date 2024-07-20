@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Drag_burn</string>
+    <string name="dummy_button"></string>
+    <string name="dummy_content">_</string>
+
+    <string name="textinfstr">Use nitro to boost, \nand upshft the car\'s gear.
+       \nToo much burn or too late shift means fail.
+        \nToo early shift deacreases acceleration.
+        \nGenerate reousrces at races and AFK. \nBuy upgrade (9).
+        \n\nCredits: \nimage by khurshidalamek
+        \nCode by OlegTimer
+
+    </string>
+
+</resources>
